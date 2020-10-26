@@ -43,6 +43,14 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         $this->installer = new Installer($io, $composer, $compound_generators, $empty_generator, $reflection_generator);
     }
 
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+    }
+
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
+    }
+
     public static function getSubscribedEvents()
     {
         return [
